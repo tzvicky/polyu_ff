@@ -1,0 +1,15 @@
+How-to:
+
+1) Oxidize the polyurethan system (conf1.gro) using the pupla.py script, with 0.8 probability for oxidation for 1 and 2 variants)
+
+pupla.py conf1.gro 0.5 > conf.gro
+
+2) USe pdb2gmx to generate the ITP file using the custom force field (the force field directory amber99sb-ildn_pu.ff must be located in the current directory): 
+
+gmx pdb2gmx -ff amber99sb-ildn_pu -f poly.gro
+
+3) run grompp and mdrun:
+
+a) gmx grompp
+b) gmx mdrun
+

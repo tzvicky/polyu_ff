@@ -1,0 +1,11 @@
+amber99sb-ildn_pu - force field for polyurethanes of FRA-(FRB)n-FRC structure
+
+To be used with gmx pdb2gmx
+
+The fragments in the provided GRO files contain only these terminals that are needed in the FRA-(FRB)n-FRC polymer.
+
+Usage example:
+
+1) prepare GRO file with your monomers (e.g., conf_abbbb_c.gro)
+
+2) gmx pdb2gmx -ff amber99sb-ildn_pu -f conf_abbbbc.gro
